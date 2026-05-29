@@ -182,15 +182,15 @@ body::after {
 }
 
 .feature-image-about {
-  background: linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #ef4444 100%);
 }
 
 .feature-image-education {
-  background: linear-gradient(135deg, #047857 0%, #4ade80 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #ef4444 100%);
 }
 
 .feature-image-contact {
-  background: linear-gradient(135deg, #b91c1c 0%, #f97316 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #ef4444 100%);
 }
 
 .about-image {
@@ -200,6 +200,33 @@ body::after {
   margin: 20px auto;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.edu-image {
+  float: left;
+  width: 220px;
+  max-width: 35%;
+  margin: 0 20px 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.education-text p {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .edu-image {
+    float: none;
+    display: block;
+    margin: 12px auto;
+    max-width: 60%;
+  }
+  .education-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .page-content h1 {
