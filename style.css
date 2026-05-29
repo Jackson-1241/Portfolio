@@ -211,6 +211,13 @@ body::after {
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
+.edu-image {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  background: #f6f6f6;
+}
+
 .education-text p {
   font-size: 1.1rem;
   text-align: left;
