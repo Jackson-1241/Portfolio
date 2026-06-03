@@ -1,35 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Calibri', sans-serif;
-  background-color: #f0f4f8;
+  background-color: #eef2f7;
   color: #222;
-  margin: 0;
 }
 
 header {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
   color: white;
-  padding: 50px 60px;
+  padding: 60px;
+  text-align: center;
+  border-bottom: 4px solid #e94560;
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 nav {
-  background-color: #0f3460;
-  padding: 14px 60px;
+  background-color: #16213e;
+  padding: 15px 60px;
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #c0d4e8;
-  font-size: 0.9rem;
+  color: #a8c0d6;
+  font-size: 0.95rem;
   font-weight: 600;
-  padding: 7px 18px;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
+  padding: 9px 24px;
+  border-radius: 25px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 nav a:hover {
@@ -38,39 +48,56 @@ nav a:hover {
 }
 
 .main {
-  padding: 60px;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   max-width: 780px;
   margin: 0 auto;
 }
 
 .intro, .box {
   background: white;
-  border-radius: 10px;
-  padding: 35px 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 40px 45px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  border-top: 4px solid #0f3460;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.intro:hover, .box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 h2 {
   font-size: 1.6rem;
-  color: #1a1a2e;
-  margin-bottom: 12px;
+  color: #0f3460;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eef2f7;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.9;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+img {
+  border-radius: 10px;
 }
 
 .phone {
   font-size: 1rem;
-  color: #333;
-  font-weight: 600;
+  color: #0f3460;
+  font-weight: 700;
   margin-bottom: 25px;
+  padding: 12px 20px;
+  background-color: #eef2f7;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .socials {
@@ -83,16 +110,19 @@ p {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 10px 22px;
-  border-radius: 6px;
-  transition: opacity 0.2s;
+  font-size: 0.95rem;
+  padding: 11px 26px;
+  border-radius: 25px;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
-.socials a:hover { opacity: 0.85; }
+.socials a:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
 
 .instagram { background-color: #C13584; }
-.snapchat  { background-color: #FFFC00; color: #000; }
+.snapchat  { background-color: #f7c700; color: #000; }
 .twitter   { background-color: #1DA1F2; }
 .github    { background-color: #333; }
 
@@ -100,29 +130,21 @@ p {
 @media (min-width: 768px) {
 
   header {
-    padding: 60px 80px;
-    text-align: center;
+    padding: 70px 80px;
   }
 
   header h1 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 
   nav {
     padding: 16px 80px;
     gap: 15px;
-    justify-content: center;
-  }
-
-  nav a {
-    font-size: 1rem;
-    padding: 8px 22px;
   }
 
   .main {
-    padding: 60px 80px;
+    padding: 70px 40px;
     max-width: 900px;
-    margin: 0 auto;
   }
 
 }
@@ -131,26 +153,24 @@ p {
 @media (min-width: 1100px) {
 
   header {
-    padding: 70px 120px;
-    text-align: center;
+    padding: 80px 120px;
   }
 
   header h1 {
-    font-size: 3.8rem;
+    font-size: 4rem;
   }
 
   nav {
     padding: 18px 120px;
     gap: 20px;
-    justify-content: center;
   }
 
   nav a {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .main {
-    padding: 70px 120px;
+    padding: 80px 40px;
     max-width: 1100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,15 +178,15 @@ p {
   }
 
   .intro, .box {
-    padding: 40px 45px;
+    padding: 45px 50px;
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
 }
